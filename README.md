@@ -2,7 +2,7 @@
 
 
 ## Project Overview
-A colorado Board of Elections employee has given you the following tasks to complete the election audit of a recent local congressional election
+A Colorado Board of Elections employee has given you the following tasks to complete the election audit of a recent local congressional election
 
 1. Calculate the total number of votes cast.
 2. Get a complete list of candidates who recieved votes.
@@ -30,6 +30,26 @@ The analysis of the election shows that:
 - The winner of the election was:
 	  - Diana DeGette, who received 73.8% of the votes and 272,892 number of votes.
 
-## Challenge Overview
+### Challenge Overview
 
-## Challenge Summary
+The Colorado Board of Elections employee has reviewed the data you have provided and asked you to complete additional tasks before the election audit of a recent local congressional election can be completed.
+
+1. Calculate the voter turnout for each county.
+2. Calculate the percentage of votes from each county out of the total votes count.
+3. Determine the county that had the highest turnout. 
+
+### Challenge Summary
+
+- The analysis of the election at the county level shows:
+	- There are 3 counties included in this election.
+	- The counties are:
+		- Arapahoe
+		- Denver
+		- Jefferson
+		
+	- The county results were:
+		- Arapahoe made up 6.7% of the total votes cast and had 24,801 voters.
+		- Denver made up 82.8% of the total votes cast and had 306,055 voters.
+		- Jefferson made up 10.5% of the total votes cast and had 38,855 voters.
+		
+	- The county with the largest voter turnout was Denver at 82.8% with 306,055 voters.
