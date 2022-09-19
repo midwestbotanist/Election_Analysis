@@ -39,6 +39,9 @@ with open(file_to_save, "w") as txt_file:
         txt_file.write("Jefferson\n")
 
 
+# 1. Initialize a total vote counter
+total_votes = 0
+
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
 
@@ -48,3 +51,12 @@ with open(file_to_load) as election_data:
         # Print each row in the CSV file.
         headers = next(file_reader)
         print(headers)
+
+         # Print each row in the CSV file.
+        for row in file_reader:
+                
+                #2. Add to the toal vote count
+                total_votes += 1
+
+# 3. Print the toal votes
+print(total_votes)
