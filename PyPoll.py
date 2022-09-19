@@ -48,6 +48,11 @@ candidate_options = []
 # Declare the empty dictionary
 candidate_votes = {}
 
+# Winning candidate and winning count tracker
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
 
@@ -89,14 +94,40 @@ for candidate_name in candidate_votes:
         # 3. Calculate the percentage of votes
         vote_percentage = float(votes) / float(total_votes) * 100
 
+
+        # To do: print out each candidate's name, vote count, and percentage of votes to the terminal
+
+        # Determine winning vote count and candidate
+        # Determine if votes is greater than the winning count
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+                
+                # If true then set winning_count = votes and winning_percentage = vote_percentage
+                winning_count = votes
+                
+                winning_percentage = vote_percentage
+                
+                # And, set the winning_candidate equal to the candidate's name
+                winning_candidate = candidate_name
+
+        # To do: print out the winning candidate, vote count, and percentage to terminal
+        print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+winning_candidate_summary = (
+                f"--------------------------\n"
+                f"Winner: {winning_candidate}\n"
+                f"Winning Vote Count: {winning_count:,}\n"
+                f"Winning Percentage: {winning_percentage:.1f}%\n"
+                f"--------------------------\n")
+print(winning_candidate_summary)
+
         # 4. Print the candate name and percentage of votes
-        print(f"{candidate_name}: received {round(vote_percentage, 1)}% of the vote.")
+        #print(f"{candidate_name}: received {round(vote_percentage, 1)}% of the vote.")
 
 # 3. Print the toal votes
-print(total_votes)
+#print(total_votes)
 
 # Print the candidate list
-print(candidate_options)
+#print(candidate_options)
 
 # Print the candidate vote dictionary
-print(candidate_votes)
+#print(candidate_votes)
